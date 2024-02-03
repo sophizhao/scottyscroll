@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 </head>
 <body>
-    <input type="file" accept="video/*" id="fileInput">
-    <button onclick="uploadVideo()">Upload Video</button>
+<div class="container">
+    <div id="upload-container">
+        <input id="file-input" type="file" accept="video/*" id="fileInput">
+        <button id="upload-button" onclick="uploadVideo()">Upload Video</button>
 
-    <form method="POST">
-        <input name="userUrl">
-        <input type="submit">
-    </form>
+    </div>
+    
+        <form method="POST">
+            <input name="variable">
+            <input type="submit">
+</div>
+
     
 <script src="script.js"></script>
 </body>

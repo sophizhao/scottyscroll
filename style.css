@@ -1,15 +1,11 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html {
   scroll-snap-type: y mandatory;
-}
-form{
-  position: fixed;
-  top:0;
 }
 body {
   color: white;
@@ -68,6 +64,7 @@ nav a{
   width: 100%;
   background-color: white;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .video_player {
@@ -120,7 +117,7 @@ nav a{
 button {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #b2d7ff;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -133,4 +130,59 @@ button:hover {
 
 input[type="file"] {
   margin-bottom: 10px;
+}
+
+/* upload page */
+#upload-button{
+  width: 300px;
+  height: 60px;
+  background: rgb(15, 2, 2);
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  
+}
+
+input{
+  font-size:20px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+input::file-selector-button{
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-weight: 200;
+  background-color: #4bcdf1;
+  border-radius: 20px;
+  border: none;
+  height: 3rem;
+  margin-right: 15px;
+}
+ section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+.container{
+  border: dashed 5px rgb(168, 168, 168) ;
+  border-radius: 20px;
+  height: 80vh;
+  width:50vh;
+  margin: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #a4a4a4;
+}
+#file-input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:350px
+}
+#upload-container{
+  background-color: #9ce9fe;
 }
