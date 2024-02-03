@@ -16,16 +16,12 @@ def words_to_subclip(string):
     txt_clip = txt_clip.set_audio(audio_clip)
     return txt_clip
 
-def script_to_subclips(script, words_per_screen):
+def script_to_subclips(video_filename, script, words_per_screen):
     words = script.split()
     chunks = [' '.join(words[chunk_index*words_per_screen:chunk_index*words_per_screen+words_per_screen])
               for chunk_index in
                 range(math.ceil(len(words)/float(words_per_screen)))]
-    return concatenate_videoclips([words_to_subclip(chunk) for chunk in
+    video = concatenate_videoclips([words_to_subclip(chunk) for chunk in
                                    chunks], method='compose')
+    video.write_videofile(video_filename, fps=24)
 
-if __name__ == '__main__':
-    #video = words_to_subclip('Am I the asshole? I, 25 M,')
-    with open('script.txt', 'r') as f:
-        video = script_to_subclips(f.read(), 7)
-    video.write_videofile('barista_aita_test.webm', fps=25)
