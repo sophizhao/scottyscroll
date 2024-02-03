@@ -2,6 +2,7 @@ import tempfile
 from gtts import gTTS
 from moviepy.editor import *
 import math
+import scraper
 
 def words_to_subclip(string):
     #Text to Speech input string
