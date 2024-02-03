@@ -76,10 +76,47 @@
     </div>
     <!--video ends-->
 
-  </div>
 
-  <script>
-    const videos = document.querySelectorAll('video');
+    <div class = "video">
+      <video src="video0_2.mp4" class="video_player"></video>
+
+      <!-- sidebar -->
+      <div class="videoSidebar">
+        <div class="videoSidebar_button">
+          <span class="material-icons"> favorite_border </span>
+          <p>12</p>
+        </div>
+
+        <div class="videoSidebar_button">
+          <span class="material-icons"> chat </span>
+          <p>23</p>
+        </div>
+
+        <div class="videoSidebar_button">
+          <span class="material-icons"> share </span>
+          <p>75</p>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="videoFooter">
+        <div class="videoFooter_text">
+          <h3>Farnam Jahanian</h3>
+          <p class="videoFooter_description"> Testing Video </p>
+        </div>
+      </div>
+
+    </div>
+    <!--video ends-->
+
+
+    <input type="file" accept="video/*" id="fileInput">
+    <button onclick="uploadVideo()">Upload Video</button>
+
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-storage.js"></script>
+  </div>
+  <script>const videos = document.querySelectorAll('video');
 
     for (const video of videos) {
       video.addEventListener('click', function() {
@@ -89,7 +126,7 @@
           video.pause();
         }
       })
-    }
-  </script>
+    }</script>
+  <script src="script.js"></script>
 </body>
 </html>
