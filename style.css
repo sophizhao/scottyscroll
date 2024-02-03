@@ -15,6 +15,12 @@ body {
   place-items: center;
 }
 
+nav{
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
 .app_videos {
   position: relative;
   height: 750px;
